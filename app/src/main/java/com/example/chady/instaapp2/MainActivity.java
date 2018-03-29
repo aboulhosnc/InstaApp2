@@ -1,5 +1,6 @@
 package com.example.chady.instaapp2;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,11 +12,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.PicassoProvider;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
                 viewHolder.setTitle(model.getTitle());
                 viewHolder.setDesc(model.getDesc());
+                viewHolder.setImage(getApplication()Context(),model.getImage());
 
             }
         };
@@ -79,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
         public void setDesc(String desc){
             TextView post_desc = (TextView) itemView.findViewById(R.id.textDescription);
             post_desc.setText(desc);
+        }
+
+        public void setImage(Context ctx, String image){
+            ImageView post_image = (ImageView) itemView.findViewById(R.id.post_image);
+            Picasso.
         }
 
     }
