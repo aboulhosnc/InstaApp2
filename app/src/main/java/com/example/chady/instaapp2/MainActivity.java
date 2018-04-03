@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         // finds reference in database called InstaApp
         mDatabase = FirebaseDatabase.getInstance().getReference().child("InstaApp");
         mAuth = FirebaseAuth.getInstance();
+        /*
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             // if no user is logged in take them to the log in screen
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
+        */
 
 
     }
@@ -64,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        mAuth.addAuthStateListener(mAuthListener);
+        //mAuth.addAuthStateListener(mAuthListener);
+
         FirebaseRecyclerAdapter<Insta,InstaViewHolder> FBRA = new FirebaseRecyclerAdapter<Insta, InstaViewHolder>(
                 Insta.class,
                 R.layout.insta_row,

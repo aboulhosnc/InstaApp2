@@ -17,6 +17,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import static android.app.Activity.RESULT_OK;
+
 public class PostActivity extends AppCompatActivity {
 
     private static final int GALLERY_REQUEST = 2;
