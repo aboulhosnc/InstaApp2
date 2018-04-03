@@ -30,6 +30,7 @@ public class Insta {
     }
 
     public void setDesc(String desc) {
+
         this.desc = desc;
     }
 
@@ -38,6 +39,7 @@ public class Insta {
     }
 
     public void setTitle(String title) {
+
         this.title = title;
     }
 }
